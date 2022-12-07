@@ -26,6 +26,11 @@ const forest_audio = document.querySelector('#forest-audio')
 
 const slide_container = document.querySelectorAll(".slidecontainer")
 
+const btn_light = document.querySelector('#light')
+const btn_dark = document.querySelector('#dark')
+
+const body = document.querySelector('body')
+
 
 let running
 
@@ -57,5 +62,10 @@ export const Elements ={
 
   forest_volume,
   forest_audio,
-  slide_container
+  slide_container,
+
+  btn_light,
+  btn_dark,
+
+  body
 }

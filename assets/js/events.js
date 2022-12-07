@@ -9,7 +9,10 @@ const {
   btn_plus,
   btn_rain,
   btn_stop,
-  slide_container
+  slide_container,
+  btn_light,
+  btn_dark,
+  body
 } = Elements
 
 export default function Events({
@@ -54,5 +57,16 @@ export default function Events({
     element.addEventListener('click', function(event) {
       event.stopPropagation()
     })
+  })
+
+  btn_light.addEventListener('click', function(e){
+    btn_light.classList.add('hide')
+    btn_dark.classList.remove('hide'),
+    body.classList.add('dark')
+  })
+  btn_dark.addEventListener('click', function(e){
+    btn_light.classList.remove('hide')
+    btn_dark.classList.add('hide'),
+    body.classList.remove('dark')
   })
 }
