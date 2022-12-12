@@ -1,7 +1,6 @@
 export default function Controls({
-  bg_btn_active,
-  bg_btn_inactive,
-  running
+  running,
+  body
 }) {
 
   function changeButtonIconColor(elem) {
@@ -9,12 +8,15 @@ export default function Controls({
     icon = document.querySelector(`#${icon}`)
 
 
-    if (elem.style.backgroundColor == bg_btn_active) {
-      elem.style.backgroundColor = bg_btn_inactive
-      icon.style.fill = "#000"
+    if (elem.style.backgroundColor == "var(--bg-btn-sound-active)") {
+      elem.style.backgroundColor = "var(--bg-btn-sound-inactive)"
+      icon.classList.add(`aa`)
+      icon.classList.remove(`light`)
     } else {
-      elem.style.backgroundColor = bg_btn_active
-      icon.style.fill = "#fff"
+      elem.style.backgroundColor = "var(--bg-btn-sound-active)"
+      icon.classList.add(`aa`)
+      console.log(icon)
+      icon.classList.remove(`dark`)
     }
   }
 

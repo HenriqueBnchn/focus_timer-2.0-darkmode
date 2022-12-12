@@ -27,7 +27,8 @@ const {
 
   forest_volume,
   forest_audio,
-  slide_container
+  slide_container,
+  body
 } = Elements
 
 const timer = Timer({
@@ -37,9 +38,8 @@ const timer = Timer({
 })
 
 const controls = Controls({
-  bg_btn_active,
-  bg_btn_inactive,
-  running
+  running,
+  body
 })
 
 

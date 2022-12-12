@@ -63,10 +63,12 @@ export default function Events({
     btn_light.classList.add('hide')
     btn_dark.classList.remove('hide'),
     body.classList.add('dark')
+    body.classList.remove('light')
   })
   btn_dark.addEventListener('click', function(e){
     btn_light.classList.remove('hide')
     btn_dark.classList.add('hide'),
     body.classList.remove('dark')
+    body.classList.add('light')
   })
 }
