@@ -4,19 +4,21 @@ export default function Controls({
 }) {
 
   function changeButtonIconColor(elem) {
-    let icon = String(elem.id) + "-icon"
+    let icon = elem.id + "-icon"
     icon = document.querySelector(`#${icon}`)
 
+    let slider = elem.id + "-volume"
+    slider = document.querySelector(`#${slider}`)
 
     if (elem.style.backgroundColor == "var(--bg-btn-sound-active)") {
       elem.style.backgroundColor = "var(--bg-btn-sound-inactive)"
-      icon.classList.add(`aa`)
-      icon.classList.remove(`light`)
+      icon.style.fill = "var(--icon-sound-inactive)" 
+      slider.style.backgroundColor = "#000"
+      
     } else {
       elem.style.backgroundColor = "var(--bg-btn-sound-active)"
-      icon.classList.add(`aa`)
-      console.log(icon)
-      icon.classList.remove(`dark`)
+      icon.style.fill = "var(--icon-sound-active)"
+      slider.style.backgroundColor = "#fff"
     }
   }
 

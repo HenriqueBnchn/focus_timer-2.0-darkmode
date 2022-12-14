@@ -4,13 +4,15 @@ export default function Timer({
   secondsDisplay
 }){
   let timerTimeout
-
+  
   function countdown() {
 
     timerTimeout = setTimeout(function () {
+      
       let cr_minute = Number(minutesDisplay.textContent)
       let cr_second = Number(secondsDisplay.textContent)
       let isFinished = cr_minute <= 0 && cr_second <= 0
+
 
       if (isFinished) {
         return
@@ -27,7 +29,9 @@ export default function Timer({
       secondsDisplay.textContent = String(cr_second).padStart(2, '0')
       minutesDisplay.textContent = String(cr_minute).padStart(2, '0')
 
+     
       countdown()
+
     }, 1000)
   }
 
